@@ -1,5 +1,8 @@
-JavaScript
-// ... (code ở trên)
+// Đợi DOM load xong
+document.addEventListener('DOMContentLoaded', function() {
+const addButton = document.getElementById('add-task-btn');
+const taskInput = document.getElementById('new-task-input');
+const taskList = document.getElementById('task-list');
 addButton.addEventListener('click', function() {
 const taskText = taskInput.value;
 // Áp dụng "early return"
@@ -15,4 +18,4 @@ taskList.appendChild(newTask);
 // Xóa nội dung input
 taskInput.value = "";
 });
-// ... (code ở dưới)
+});	
